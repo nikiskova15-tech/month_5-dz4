@@ -2,7 +2,8 @@ import { create } from "zustand";
 
 const initialState = { // Начальное состояние
     todos: [],
-    filter: 'all'
+    filter: 'all',
+    filteredTodos: []
 }
 
 export const useTodoStore = create((set) => ({
@@ -42,6 +43,8 @@ export const useTodoStore = create((set) => ({
         })),
 
     setFilter: (filter) => set({ filter }),
+    
+    setFilteredTodos: (filteredTodos) => set({ filteredTodos }),
 
     reset: () => set(initialState),
 }))

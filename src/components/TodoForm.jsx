@@ -4,7 +4,7 @@ import { useTodoStore } from "../store/useTodoStore"
 
 export default function TodoForm() {
     // Текст в инпуте - Локальное состояние
-    const [title, setTitle] = useState()
+    const [title, setTitle] = useState('')
     const { addTodo } = useTodoStore()
 
     function handleSubmit(e) {

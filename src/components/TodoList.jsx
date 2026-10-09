@@ -4,13 +4,13 @@ import TodoItem from "./TodoItem"
 
 export default function TodoList() {
 
-    const { todos } = useTodoStore()
+    const { filteredTodos } = useTodoStore()
 
-    if (todos.length === 0) return <p>Задач нет</p>
+    if (filteredTodos.length === 0) return <p>Задач нет</p>
 
     return (
         <ul>
-            {todos.map((todo) => ( 
+            {filteredTodos.map((todo) => (
                 <TodoItem key={todo.id} todo={todo} />
             ))}
         </ul>
