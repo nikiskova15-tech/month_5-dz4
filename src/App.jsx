@@ -1,6 +1,7 @@
 import TodoFilters from "./components/TodoFilters"
 import TodoForm from "./components/TodoForm"
 import TodoList from "./components/TodoList"
+import TodoStats from "./components/TodoStats"
 
 function App() {
 
@@ -10,6 +11,7 @@ function App() {
       <TodoForm />
       <TodoFilters />
       <TodoList />
+      <TodoStats />
     </div>
   )
 }
