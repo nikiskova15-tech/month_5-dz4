@@ -27,12 +27,13 @@ export default function TodoItem({ todo }) {
                     onChange={(e) => setDraft(e.target.value)}
                     onBlur={save}
                     onKeyDown={(e) => e.key === 'Enter' && save}
+                    onDoubleClick={() => setIsEditing(!isEditing)}
                     style={{ flex: 1 }}
                 />
             ) : (
                 <span
-                    onDoubleClick={() => setIsEditing(true)}
-                    style={{ flex: 1, textDecoration: todo.completed ? 'line-through': 'none' }}
+                    onDoubleClick={() => setIsEditing(!isEditing)}
+                    style={{ flex: 1, textDecoration: todo.completed ? 'line-through': 'none'}}
                 >
                     {todo.title}
                 </span>
